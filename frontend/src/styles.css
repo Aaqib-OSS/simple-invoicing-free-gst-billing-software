@@ -1739,6 +1739,23 @@ input[type='radio'] {
   font-size: 0.95rem;
 }
 
+/* A live hint that is empty most of the time. Out of the grid flow while empty
+   (an empty grid item still adds the field's 8px gap), but still in the
+   accessibility tree so screen readers announce text when it appears. */
+.field-hint--live:empty {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* A fix offered inside a field hint reads as part of the sentence. */
+.field-hint .link-button {
+  font-size: inherit;
+  text-align: left;
+}
+
 /* An address the person has to check by eye, on a line of its own. */
 .sent-address {
   margin: 4px 0 0;
@@ -6905,6 +6922,10 @@ a.ledger-chip:focus-visible {
 
   .sidebar-toggle {
     min-height: 40px;
+  }
+
+  .field-hint .link-button {
+    min-height: 44px;
   }
 }
 
