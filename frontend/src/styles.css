@@ -1739,6 +1739,12 @@ input[type='radio'] {
   font-size: 0.95rem;
 }
 
+@media (max-width: 767px) {
+  .invoice-composer-page .field__label-row { align-items: center; }
+  .invoice-composer-page .field__label-row .link-button,
+  .invoice-composer-page .line-items__tools .link-button { min-height: 44px; min-width: 44px; }
+  .invoice-composer-page .line-item > .button--icon { width: 44px; height: 44px; }
+}
 /* A live hint that is empty most of the time. Out of the grid flow while empty
    (an empty grid item still adds the field's 8px gap), but still in the
    accessibility tree so screen readers announce text when it appears. */
